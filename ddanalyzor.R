@@ -7,29 +7,6 @@ ddanalyzor <- function(cases, positive_control, extremes, calibrate = T, output 
                        beta = 0, alpha = 0.05,
                        bandwidths = seq(1, 5000, 50), n = 10000, seed = NULL) {
 
-  #INPUT:
-  #cases: List of fluorescence data for each wells in a single plate for a single channel
-  #where each element is a numeric vector named.
-  #positive_control: Named list of fluorescence data for positive control well(s). Can take values:
-  #1) A list of one numeric vector (if more than one control was used combine these into one vector)
-  #2) A single numeric value which is then used as cut-point defining positive and negative droplets.
-  #When a manually set threshold is used (not recommended) extremes, calibrate, beta, bandwidths and n is not used.
-  #extremes: Numeric of length 2 designating the number of negative and positive extremes.
-  #to expect in control data (e.g. 1 negative and 1 positive peak is c(1,1) ).
-  #calibrate: (default True) Data is linearly calibrated according to the positive control
-  #so that the median of negative droplets is similar to positive control.
-  #output: Save a file with plate results for all wells. If NULL (default) return data frame.
-  #beta:
-  #alpha:
-  #bandwidths: Vector of bandwidths to search through from left to right to find extremes.
-  #n: The number of qually spaced points to used for kernel estimator.
-  #seed:
-  #
-  #
-  #OUTPUT:
-  #A table
-
-
   ### FUNCTIONS ###
   time_stamp <- function(){
     #Return Sys.time() in the form yyyymmddhhmmss
