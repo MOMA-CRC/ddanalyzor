@@ -41,6 +41,7 @@ for(w in well_names) {
 
 source("ddanalyzor.R")
 
-ddanalyzor(cases = raw_data[!names(raw_data) %in% "A01"],
-           positive_control = raw_data["A01"],
-           extremes = c(1,1))
+results <- 
+  ddanalyzor(cases = raw_data[!names(raw_data) %in% "A01"],
+             positive_control = raw_data["A01"],
+             extremes = c(1,1))
