@@ -2,16 +2,16 @@
 
 ## What
 To calculate the concentration of target DNA in a droplet digital PCR (ddPCR)
-experiments one need to set a threshold between positive and negative droplets.
+experiment one need to set a threshold between positive and negative droplets.
 This is often done subjectively by "eyeballing", or using an automatic threshold
-setting options in the software.
+setting option in the software.
 **ddanalyzor.R** is a simple script that uses base R to turn raw ddPCR
-data into concentration when these approaches are not acceptable.
+data into concentration when the above approaches are not acceptable.
 
 **ddanalyzor.R** uses a smoothing kernel on a positive control sample to define
 positive and negative droplets and a fluorescence threshold to separate these.
-This threshold is used on unknown samples - optionally after calibrating samples
-to similar median negative fluorescence - and hence to calculate copies per well.
+This threshold is then used on unknown samples - optionally after calibrating samples
+to similar median negative fluorescence - in order to calculate copies per well.
 
 
 ## How
