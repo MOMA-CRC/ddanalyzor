@@ -20,7 +20,8 @@ to similar median negative fluorescence - and hence to calculate copies per well
 3. **Run ddanalyzor for each ddPCR plate**
 
 ## ddanalyzor parameters
-
+### Input
+_cases_
 ## Cite
 **ddanalyzor** was used in the paper [Novel DNA methylation biomarkers show high
 sensitivity and specificity for blood-based detection of colorectal cancer — a
