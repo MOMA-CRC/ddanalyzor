@@ -11,7 +11,8 @@ data into concentration when these approaches are not acceptable.
 **ddanalyzor.R** uses a smoothing kernel on a positive control sample to define
 positive and negative droplets and a fluorescence threshold to separate these.
 This threshold is used on unknown samples - optionally after calibrating samples
-to similar median negative fluorescence - and hence to calculate copies per
+to similar median negative fluorescence - and hence to calculate copies per well.
+
 
 ## How
 1. **Export raw fluorescence data**
