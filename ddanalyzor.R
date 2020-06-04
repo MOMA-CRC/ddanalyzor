@@ -1,8 +1,3 @@
-###-------------------###
-### JENSEN ET AL 2019 ###
-###-------------------###
-
-
 ddanalyzor <- function(cases, positive_control, extremes, calibrate = T, output = NULL,
                        beta = 0, alpha = 0.05,
                        bandwidths = seq(1, 5000, 50), n = 10000, seed = NULL) {
