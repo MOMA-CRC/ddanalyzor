@@ -32,7 +32,7 @@ to similar median negative fluorescence - in order to calculate copies per well.
 * n [10000]. The number of equally spaced points to used for kernel estimator.
 * seed [NULL]. For reproducibility.
 
-### OUTPUT
+### Output
 A data frame with results from each well (when output is NULL). A table is written
 to a file if specified by output. The columns are: "sample_id", "positive_count",
 "negative_count", "copies_per_well", "copies_per_well_ci_low", "copies_per_well_ci_high",
