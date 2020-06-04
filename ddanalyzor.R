@@ -27,17 +27,10 @@ ddanalyzor <- function(cases, positive_control, extremes, calibrate = T, output 
   #
   #
   #OUTPUT:
-  #A table with the following columns:
-  #1) Calibrated data for the channel and ctrl well and for the given 2) band width, 
-  #3) mode for negative and 4) positive droplets, and 5) the minimum. 6) channel,
-  #7) ctrl well, 8) analysis date and 9) raw input plate data
-  
+  #A table
   
   
   ### FUNCTIONS ###
-  
-  
-  
   time_stamp <- function(){
     #Return Sys.time() in the form yyyymmddhhmmss
     gsub(" ", "-", gsub(":|-| ", "", paste(Sys.time(), collapse = " ")) ) 
