@@ -59,7 +59,7 @@ results <-
              extremes = c(1,1))
 head(results)             
 
-# Then do similar for remaining plates and channels, or wrap into a lapply etc.
+# Then do similar for remaining plates and channels, or wrap into an lapply.
 
 
 ```
