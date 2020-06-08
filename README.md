@@ -38,7 +38,7 @@ raw_data_files <- list.files(raw_data_dir, pattern = "Amplitude.csv", full.names
 
 #Then read into list of data frames (note QuantaSoft format)
 raw_data <- lapply(raw_data_files,
-                   read.table,
+                   read.csv,
                    header = T,
                    stringsAsFactors = F)
 
@@ -58,6 +58,9 @@ results <-
              positive_control = raw_data["A01"],
              extremes = c(1,1))
 head(results)             
+
+# Then do similar for remaining plates and channels, or wrap into a
+
 
 ```
 
