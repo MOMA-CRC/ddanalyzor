@@ -25,7 +25,8 @@ The starting point for **ddanalyzor** is a (named) list of numeric vectors of ra
 fluorescence data. Run **ddanalyzor** for each plate and each fluorescence channel/fluorophore.
 For instance, say you have exported raw data from the QuantaSoft software
 (`options > export amplitude and cluster data`) from a single plate to csv files
-into the directory _raw_data_. If each file is name _A01_Amplitude.csv_, _A02_Amplitude.csv_ etc you can do
+into the directory _raw_data_. If each file is nameD _A01_Amplitude.csv_, _A02_Amplitude.csv_ etc
+you can do something along:
 
 ```r
 
