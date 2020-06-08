@@ -46,7 +46,7 @@ raw_data <- lapply(raw_data_files,
 names(raw_data) <- sub("_Amplitude.csv", "", basename(raw_data_files))
 
 # Since ddanalyzor analyzes in a plate- and channel/target-wise manner extract first column (channel 1)
-ch1 <- lapply(raw_data, "[[", 1)
+ch1 <- lapply(raw_data, "[[", 1) # ch2 <- lapply(raw_data, "[[", 2)
 
 # This is a list of numeric vectors
 str(ch1)
