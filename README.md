@@ -54,8 +54,8 @@ str(ch1)
 # Now, run ddanalyzor with the positive control in "A01" expecting one negative and one positive populations
 source("ddanalyzor.R")
 results <-
-  ddanalyzor(cases = raw_data[!names(raw_data) %in% "A01"],
-             positive_control = raw_data["A01"],
+  ddanalyzor(cases = ch1[!names(ch1) %in% "A01"],
+             positive_control = ch1["A01"],
              extremes = c(1,1))
 head(results)             
 
