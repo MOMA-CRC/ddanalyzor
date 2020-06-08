@@ -60,7 +60,7 @@ head(results)
 
 ```
 
-A minimal example is also described in [example.R][./example.R].
+A minimal example is also described in [example.R](./example.R).
 
 
 ## ddanalyzor parameters
