@@ -17,12 +17,12 @@ to similar median negative fluorescence - in order to calculate copies per well.
 ## How
 1. **Export raw fluorescence data**
 2. **Read raw data into named R lists**
-3. **Run ddanalyzor for each ddPCR plate**
+3. **Run ddanalyzor for each ddPCR plate and each gene/fluorophore**
 
 
 ## Example
 The starting point for **ddanalyzor** is a (named) list of numeric vectors of raw
-fluorescence data. Run **ddanalyzor** for each plate and each fluorescence channel/fluorophore.
+fluorescence data. Run **ddanalyzor** for each plate and each fluorescence channel/gene/fluorophore.
 For instance, say you have exported raw data from the QuantaSoft software
 (`options > export amplitude and cluster data`) from a single plate to csv files
 into the directory _raw_data_. If each file is named _A01_Amplitude.csv_, _A02_Amplitude.csv_ etc
@@ -30,19 +30,19 @@ you can do something along:
 
 ```r
 
-#The raw data directory
+#The raw data directory name
 raw_data_dir <- "raw_data"
 
-#Find all Amplitude.csv files in raw data directory
+#Find all Amplitude.csv files in the raw data directory
 raw_data_files <- list.files(raw_data_dir, pattern = "Amplitude.csv", full.names = T)
 
-#Then read into list of data frames (note QuantaSoft format)
+#Then read the Amplitude.csv files into a list of data frames (note: shown for a typical QuantaSoft format)
 raw_data <- lapply(raw_data_files,
                    read.csv,
                    header = T,
                    stringsAsFactors = F)
 
-# Name raw data "A01", "A02" etc.
+# Name raw data frames "A01", "A02" instead of "A01_Amplitude.csv", "A02_Amplitude.csv" etc.
 names(raw_data) <- sub("_Amplitude.csv", "", basename(raw_data_files))
 
 # Since ddanalyzor analyzes in a plate- and channel/target-wise manner extract first column (channel 1)
@@ -51,7 +51,7 @@ ch1 <- lapply(raw_data, "[[", 1) # ch2 <- lapply(raw_data, "[[", 2)
 # This is a list of numeric vectors
 str(ch1)
 
-# Now, run ddanalyzor with the positive control in "A01" expecting one negative and one positive populations
+# Now, run ddanalyzor with the positive control in "A01" expecting one negative and one positive population
 source("ddanalyzor.R")
 results <-
   ddanalyzor(cases = ch1[!names(ch1) %in% "A01"],
@@ -64,7 +64,8 @@ head(results)
 
 ```
 
-A minimal example is also described in [example.R](./example.R).
+A minimal example is also described in [example.R](./example.R). 
+Here one can play around with the fluorescence profile (negatives, positives and rain).
 
 
 ## ddanalyzor parameters
