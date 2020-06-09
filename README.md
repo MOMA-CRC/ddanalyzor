@@ -16,7 +16,7 @@ to similar median negative fluorescence - in order to calculate copies per well.
 
 ## How
 1. **Export raw fluorescence data**
-2. **Read raw data into named R lists**
+2. **Read raw data into named R list**
 3. **Run ddanalyzor for each ddPCR plate and each gene/fluorophore**
 
 
